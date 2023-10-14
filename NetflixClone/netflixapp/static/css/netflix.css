@@ -1,0 +1,245 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#image-ruler{
+    border-top: 8px solid;
+    margin-top: 0.8px;
+}
+
+body{
+   background: #000; 
+   color: #fff;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 120px;
+}
+.logo{
+    width:150px;
+    cursor: pointer;
+}
+nav button{
+    border: 0;
+    outline: 0;
+    background:#db0001;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+nav button:hover{
+    background: rgb(146, 7, 7) ;
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 9%;
+}
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.header-content p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header-content h3{
+    font-size: 25px;
+    margin-bottom: 20px; 
+    font-family:'Arial Narrow', Arial, sans-serif;
+}
+.base-email{
+    margin-bottom: 50px;
+    
+}
+/* Reduce the size of a form input */
+.base-email input{
+    background: #161616;
+    padding: 10px 5px;
+    height: 58px;
+    width: 400px;
+    opacity: 0.8;
+}
+
+.base-email button{
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    height: 58px;
+    cursor: pointer;
+    padding: 9px 2%;
+}
+.base-email button:hover{
+    background-color:rgb(146, 7, 7) !important;
+}
+
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+
+}
+.features{
+    font-size: 22px;
+
+}
+.features h2{
+    padding: 20px 12%;
+    font-size: 50px;
+    font-weight: 600;
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.features p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 12%;  
+}
+hr {
+    border-top: 7px solid;
+    width: 100%;
+}
+.FAQ h2{
+    font-size: 45px;
+    font-weight: 800;
+   
+}
+.FAQ-margin{
+    margin-top: 50px;
+    margin-bottom: -3%;
+}
+
+.accordion{
+    margin-top: 20px; 
+    
+}
+/* Style for each accordion item */
+.accordion-item {
+    background: #303030;
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px; 
+    outline: none;
+    
+}
+.accordion-button{
+    background: #303030;
+    font-size: 27px;
+    color: white;
+}
+
+.accordion-button:focus{
+    background:#303030;
+    box-shadow: none; 
+}
+
+.accordion-button:not(.collapsed){
+    background:#303030;
+    box-shadow: none;
+    color: white;
+}
+.accordion-body{
+    color: #fff;
+    font-size: 27px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.accordion-button::after{
+    background-image: none;
+    content: '\002B';
+    width: 35px; 
+    font-size: 35px;
+    text-align: center;
+    border-radius: 5px;
+    right: 15px;
+    top: 11px;
+    position: absolute;   
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: none;
+    content: '\00D7';
+   
+}
+.base-info{
+    font-size: 24px;
+}
+.row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bases{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+label{
+  height: 10%;
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+input:focus{
+    background: #161616 !important ;
+    color: #fff !important;
+    
+}
+input:not(.focused){
+    color: #fff;
+}
+
+input:focus~label,
+input:valid~label{
+    bottom: 10%;
+    font-size: 12px;
+    margin-bottom: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

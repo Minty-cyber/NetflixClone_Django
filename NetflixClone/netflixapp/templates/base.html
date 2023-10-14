@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href = "{% static 'css/netflix.css' %}">
+    <title>Netflix Interface-Clone</title>
+    <style>
+      .header{
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("{% static 'netimages/header-image.png'%}");
+      background-size: cover;
+      background-position: center;
+      padding: 10px, 8%;
+      position: relative;
+      }
+    </style>
+
+</head>
+<body>
+  <div class="header">
+    <nav>
+      <img src="{% static 'netimages/logo.png' %}" class="logo">
+      <div>
+        
+        {% if request.user.is_authenticated %}
+        <form action="{% url 'account_logout' %}" method="Post">
+          {% csrf_token %}
+          <button>Sign Out</button>
+        </form>
+            
+        {% else %}
+          <a href="{% url 'account_login' %}" >
+            <button>Sign In</button>
+          </a>
+        {% endif %}
+          
+      </div>
+    </nav>
+    <div class="header-content">
+      
+      <h1>Unlimited movies, TV shows and more</h1>
+      <h3>Watch anywhere. Cancel anytime.</h3>
+      <p>Ready to watch? Enter your email to create or restart your membership.</p>
+      <div class="bases">
+        <form class="base-email">
+          <div class="row1">
+            <div class="input_sec">
+            <input type="base-email" class ="form-control px-2" required>
+            <label class="place">Email</label>
+            </div>
+            <div class="input_sec">
+              <button class="btn" style="background-color: #db0001;">Get Started</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr id='image-ruler'>
+
+  {% block content %}
+    
+  {% endblock content %}
+    
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+    
+</body>
+</html>

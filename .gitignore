@@ -1,0 +1,4 @@
+test/
+NetflixClone/__pycache__/
+netflixapp/__pycache__/
+netflixapp/migrations/__pycache__/
